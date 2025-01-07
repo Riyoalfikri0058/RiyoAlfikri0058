@@ -1,0 +1,85 @@
+PROGRAM Klinik Kecantikan
+
+1. Deklarasi Variabel:
+   - pilihan (integer)
+   - jumlahPengunjung (integer) -> default 0
+   - ulang (char)
+   - nama (array of String with size 100)
+   - noAntrian (array of String with size 100)
+   - layanan (2D array of String with size 100x10)
+   - klayanan (array of integer with size 10)
+   - hrg (2D array of double with size 100x10)
+   - subThrg (array of double with size 100)
+   - subThrg1 (array of double with size 100)
+   - gThrg (array of double with size 100)
+   - gThrg1 (array of double with size 100)
+
+2. Main:
+   - Tampilkan program header
+   - Panggil fungsi menu()
+
+3. Fungsi menu():
+   - Tampilkan menu utama
+   - Pilih menu dengan input pilihan
+   - Berdasarkan pilihan, lakukan aksi sesuai dengan kasus:
+     - Jika pilihan 1, panggil fungsi isiData()
+     - Jika pilihan 2, panggil fungsi lihatData()
+     - Jika pilihan 3, panggil fungsi editData()
+     - Jika pilihan 4, panggil fungsi hapusData()
+     - Jika pilihan 5, panggil fungsi cetakNota()
+     - Jika pilihan 6, tampilkan pesan keluar dan selesai
+
+4. Fungsi isiData():
+   - Tampilkan judul "ISI DATA PENGUNJUNG"
+   - Lakukan loop untuk mengisi data pengunjung:
+     - Input nama pengunjung dan nomor antrian
+     - Reset data layanan dan harga
+     - Pilih layanan melalui input pilihan layanan:
+       - Jika pilihan layanan valid, simpan nama layanan dan harga
+       - Tanyakan apakah ingin menambah layanan lagi (Y/T)
+     - Tanyakan apakah ingin mengisi data lagi (Y/T)
+   - Akhiri dengan panggil menu()
+
+5. Fungsi lihatData():
+   - Jika belum ada data pengunjung, tampilkan pesan
+   - Jika ada data pengunjung:
+     - Lakukan paginasi (tampilkan 3 pengunjung per halaman)
+     - Tampilkan data pengunjung per halaman (nama, nomor antrian, layanan, biaya layanan)
+     - Hitung subtotal per halaman dan grand total
+     - Tampilkan grand total di halaman terakhir
+     - Tunggu input untuk lanjutkan ke halaman berikutnya
+
+6. Fungsi editData():
+   - Tampilkan daftar pengunjung yang ada
+   - Pilih data pengunjung yang ingin diedit
+   - Tampilkan data yang ingin diedit (nama, nomor antrian, layanan, biaya)
+   - Input data baru untuk pengunjung (nama, nomor antrian, layanan)
+   - Lakukan perubahan layanan seperti pada fungsi isiData()
+   - Simpan perubahan dan kembali ke menu()
+
+7. Fungsi hapusData():
+   - Tampilkan daftar pengunjung yang ada
+   - Pilih data pengunjung yang ingin dihapus
+   - Hapus data pengunjung yang dipilih (geser data lainnya)
+   - Kurangi jumlah pengunjung
+   - Kembali ke menu()
+
+8. Fungsi cetakNota():
+   - Tampilkan daftar pengunjung yang ada
+   - Pilih data pengunjung yang ingin dicetak nota
+   - Tampilkan data pengunjung (nama, nomor antrian, layanan, biaya layanan)
+   - Kembali ke menu()
+
+9. Fungsi concatenateServices(nomor):
+   - Gabungkan dan kembalikan string layanan untuk pengunjung ke-nomor
+   - Jika ada lebih dari satu layanan, pisahkan dengan koma
+
+10. Fungsi calculateTotalServicePrice(nomor):
+    - Hitung total biaya layanan untuk pengunjung ke-nomor
+    - Kembalikan total harga
+
+11. Fungsi getServiceName(klayanan):
+    - Berdasarkan pilihan layanan (1-6), kembalikan nama layanan terkait
+
+12. Fungsi getServicePrice(klayanan):
+    - Berdasarkan pilihan layanan (1-6), kembalikan harga layanan terkait
